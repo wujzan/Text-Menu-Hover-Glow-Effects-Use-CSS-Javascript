@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Hover Glow Effects Use CSS Javascript</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Work</a></li>
+        <li><a href="#">Service</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#">About</a></li>
+    </ul>
+	
+    <script>
+        let text = document.querySelectorAll('ul li a').forEach(text => {
+            text.innerHTML = text.innerHTML.split('').map(
+                (letters, i) => `<span style="transition-delay:${i*50}ms;">${letters}</span>`
+            ).join('');
+        })
+    </script>
+</body>
+</html>
